@@ -1,0 +1,14 @@
+services:
+  api-nestjs-postgres:
+    image: postgres:14.20
+    ports:
+      - "5432:5432"
+    volumes:
+      - api-nestjs-postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: sasa1234
+      POSTGRES_USER: sasa1234
+      POSTGRES_DB: bookings
+
+volumes:
+  api-nestjs-postgres-data:
